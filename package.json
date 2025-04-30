@@ -1,0 +1,16 @@
+{
+  "name": "login-rudderstack-website",
+  "version": "1.0.0",
+  "description": "Simple website with login and RudderStack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "sqlite3": "^5.1.6",
+    "cors": "^2.8.5"
+  }
+}
