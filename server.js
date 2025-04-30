@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
+const port = 3000;
 
 const app = express();
 app.use(express.json());
@@ -10,6 +11,10 @@ app.use(cors());
 
 const db = new sqlite3.Database(':memory:');
 const SECRET_KEY = 'your-secret-key'; // Replace with a secure key in production
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
 
 // Initialize database
 db.serialize(() => {
@@ -62,4 +67,4 @@ app.get('/api/verify', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+app.listen(port, () => {console.log('Server running on port 3000')});
