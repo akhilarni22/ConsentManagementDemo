@@ -88,7 +88,7 @@
           rudderanalytics.identify(email, { email });
           rudderanalytics.track('User Logged In', { email });
           localStorage.setItem('token', data.token);
-          window.location.href = '/dashboard.html';
+          window.location.href = '/docs/dashboard.html';
         } else {
           // Track failed login event
           rudderanalytics.track('Login Failed', { email });
