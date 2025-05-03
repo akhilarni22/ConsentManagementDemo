@@ -67,7 +67,7 @@
     <input type="email" id="email" placeholder="Email" required>
     <input type="password" id="password" placeholder="Password" required>
     <button onclick="login()">Login</button>
-    <p>Don't have an account? <a href=/docs/register.html>Register</a></p>
+    <p>Don't have an account? <a href=register.html>Register</a></p>
   </div>
   <script>
     async function login() {
@@ -88,7 +88,7 @@
           rudderanalytics.identify(email, { email });
           rudderanalytics.track('User Logged In', { email });
           localStorage.setItem('token', data.token);
-          window.location.href = '/docs/dashboard.html';
+          window.location.href = '/dashboard.html';
         } else {
           // Track failed login event
           rudderanalytics.track('Login Failed', { email });
